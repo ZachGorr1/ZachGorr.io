@@ -1,18 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-html, body{
-    background-color: rgba(65, 63, 63, .85);
+
+
+:root {
+
+   --clr-primary-100: rgba(255, 255, 255, 1);
+   --clr-accent-200: rgb(100, 100, 100);
+   --clr-neutral-900: rgba(0, 0, 0, 1);
+   --clr-bg-800: rgba(65, 63, 63, .85);
+   --clr-nav-500: rgba(48, 47, 47, 0.55);
+
+   --ff-primary: 'Roboto', sans-serif;
+   --ff-accent: 'Pacifico', cursive;
+}
+
+*,
+*::before,
+*::after{
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0 auto;
+}
+
+
+html{
+
+
+    background-color: var(--clr-bg-800);
     height: 100%;
-    margin: auto;
+    margin: 0 auto;
     overflow-x: hidden; 
     cursor: default;
     scroll-behavior: smooth;
 
 }
 
+
 nav ul{
-    background-color: rgba(48, 47, 47, 0.55);
+    background-color: var(--clr-nav-500);
     width: 100%;
     display: inline-block;
     text-decoration: none;
@@ -23,121 +58,173 @@ nav li{
     display: inline-block;
     text-decoration: none;
 
-    font-size: 18px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 1.125rem;
+    padding-top: .625rem;
+    padding-bottom: .625rem;
     padding-left: 2.5em;
 }
 
 nav a{
-    font-family: 'Pacifico', cursive;;
+    font-family: var(--ff-accent);
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: var(--clr-primary-100);
     text-decoration: none;
 }
 
 nav a:link{
     text-align: center;
-    color: black;
+    color: var(--clr-neutral-900);
     text-decoration: none;
 }
 
 nav a:hover{
     text-shadow: none;
-    color: rgb(100, 100, 100);
+    color: var(--clr-accent-200);
     
 
     
 }
 
-.first-section{
-    margin: 0;
+.container {
+
+    width: min(90%, 95rem);
+    height: 100%;
     padding: 20.75em;
+
+}
+
+.container--narrow {
+
+    width: min(90%, 75rem);
+    height: 100%;
+}
+.first-section {
+
+    max-width: 100%;
     background: url(OrlandoCitySkyline.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    
-    
-}
-
-.welcome{
-    color: white;
-    text-align: center;
-    font-family: "Pacifico", cursive;
-    font-size: 75px;
-    padding: 0;
-    margin: 0;
-}
-
-.about-me{
-    color: white;
-    font-family: "Roboto", serif;
-    font-size: 24px;
-    text-align: left;
-
-    padding: 1.5em;
-    line-height: 1.35em;
-    word-spacing: .01em;
-
-    background-color: rgba(65, 63, 63, .85);
-    border-radius: 25px;
-    box-shadow: 1px 1px rgba(65, 63, 63, 1) ;
-    display: none;
 
 
 }
 
-.welcome:hover,
-.welcome:focus
-{
-    color: transparent;   
-}
-
-.welcome:hover + .about-me,
-.welcome:focus
-{
+.welcome {
 
     display: flex;
-    position: absolute;
-   
-    top: 35%;
-    left: .001%;
+    position: relative;
+
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-primary-100);
+    font-family: var(--ff-accent);
+    font-size: 4.5rem;
+    text-align: center;
 
 }
 
-#second-section{
- 
-    margin: 0;
-    padding: 20.75em;
+.welcome:hover{
+
+    opacity: 0;
+}
+
+.about-me {
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    color: var(--clr-primary-100);
+    font-family: var(--ff-primary);
+    font-size: 2rem;
+
+    background-color: var(--clr-bg-800);
+    border-radius: 1.25rem;
+
+    text-align: center;
+
+    top: 15rem;
+    right: .001rem;
+
+
+}
+
+
+.welcome:hover + .about-me{
+
+    display: flex;
+}
+
+
+#second-section  {
+
+    max-width: 100%;
     background: url(ProjectsSectionImage.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.second-section-message{
+.second-section-message { 
 
-    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    color: var(--clr-neutral-900);
+    font-family: var(--ff-accent);
+    font-size: 4.5rem;
     text-align: center;
-    font-family: "Pacifico", cursive;
-    font-size: 75px;
-    padding: 0;
-    margin: 0;
+    bottom: 10rem;
 }
 
-.second-section-message:hover,
-.second-section-message:focus
-{
-    color: transparent;
+.button-center {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    bottom: 8rem;
+}
+
+.git-hub {
+  
+    padding-bottom: 1.125rem;
+    padding-top: .5rem;
+
+    text-align: center;
+
+    border-radius: 25px;
+    box-shadow: none;
+
+    background: -webkit-linear-gradient( rgb(183, 110, 121), rgb(40, 40, 40));
+    border: none;
+
+
+}
+
+.git-hub a {
+
+    text-decoration: none;
+    color: var(--clr-primary-100);
+    font-family: var(--ff-accent);
+    font-size: 3rem;
 }
 
 
+/* Resume Styling */
 .contact-info{
 
     text-align: center;
-    font-size: 18px;
-    font-family: "Roboto", serif;
-    color: white;
-    line-height: 1em;
+    font-size: 1.125rem;
+    font-family: var(--ff-primary);
+    color: var(--clr-primary-100);
+    line-height: 1.6em;
+    padding: 1rem;
 }
 
 .skills{
@@ -145,9 +232,9 @@ nav a:hover{
     text-align: left;
     font-size: 16px;
     font-family: "Roboto", serif;
-    color: white;
+    color: var(--clr-primary-100);
     line-height: 1em;
-    padding: 1em;
+    padding: 1rem;
 }
 
 .skills ul{
@@ -159,42 +246,41 @@ nav a:hover{
 
     text-decoration: none;
     display: inline-block;
-    padding-right: 1em;
+    padding-right: 1rem;
 
 }
 
 .summary{
 
     text-align: left;
-    font-size: 16px;
-    font-family: "Roboto", serif;
-    color: white;
-    line-height: 1em;
-    word-spacing: .1em;
-    padding: 1em;
+    font-size: 1em;
+    font-family: var(--ff-primary);
+    color: var(--clr-primary-100);
+    line-height: 1.6rem;
+    word-spacing: .1rem;
+    padding: 1rem;
 
 }
 
 .education{
 
     text-align: left;
-    font-size: 16px;
-    font-family: "Roboto", serif;
-    color: white;
-    line-height: 1em;
-    word-spacing: .1em;
-    padding: 1em;
+    font-size: 1em;
+    font-family: var(--ff-primary);
+    color: var(--clr-primary-100);
+    line-height: 1.6rem;
+    word-spacing: .1rem;
+    padding: 1rem;
 }
-
 
 .work-experience{
 
     text-align: left;
-    font-size: 16px;
-    font-family: "Roboto", serif;
+    font-size: 1rem;
+    font-family: var(--ff-primary);
     color: white;
-    line-height: 1em;
-    word-spacing: .1em;
-    padding: 1em;
+    line-height: 1.6rem;
+    word-spacing: .1rem;
+    padding: 1rem;
 
 }
