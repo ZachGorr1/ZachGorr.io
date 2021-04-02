@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 
-
 :root {
 
    --clr-primary-100: rgba(255, 255, 255, 1);
@@ -14,6 +13,8 @@
    --ff-primary: 'Roboto', sans-serif;
    --ff-accent: 'Pacifico', cursive;
 }
+
+@media (min-width: 575.98px) {
 
 *,
 *::before,
@@ -87,7 +88,7 @@ nav a:hover{
 
 .container {
 
-    width: min(90%, 95rem);
+    width: min(90%, 10rem);
     height: 100%;
     padding: 20.75em;
 
@@ -95,15 +96,18 @@ nav a:hover{
 
 .container--narrow {
 
-    width: min(90%, 75rem);
+    width: min(90%, 10rem);
     height: 100%;
 }
 .first-section {
 
-    max-width: 100%;
+    width: 100%;
     background: url(OrlandoCitySkyline.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 
 
 }
@@ -159,10 +163,13 @@ nav a:hover{
 
 #second-section  {
 
-    max-width: 100%;
+    width: 100%;
     background: url(ProjectsSectionImage.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 
 .second-section-message { 
@@ -192,14 +199,13 @@ nav a:hover{
 }
 
 .git-hub {
-  
-    padding-bottom: 1.125rem;
-    padding-top: .5rem;
 
-    text-align: center;
-
+    display: inline-block;
     border-radius: 25px;
     box-shadow: none;
+
+    padding-top: .5rem;
+    padding-bottom: 1.125rem;
 
     background: -webkit-linear-gradient( rgb(183, 110, 121), rgb(40, 40, 40));
     border: none;
@@ -209,6 +215,8 @@ nav a:hover{
 
 .git-hub a {
 
+    white-space: nowrap;
+    text-align: center;
     text-decoration: none;
     color: var(--clr-primary-100);
     font-family: var(--ff-accent);
@@ -283,4 +291,5 @@ nav a:hover{
     word-spacing: .1rem;
     padding: 1rem;
 
+}
 }
