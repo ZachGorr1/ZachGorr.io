@@ -14,7 +14,6 @@
    --ff-accent: 'Pacifico', cursive;
 }
 
-@media (min-width: 575.98px) {
 
 *,
 *::before,
@@ -25,34 +24,30 @@
 }
 
 
-body,
-h1,
-h2,
-h3,
-p {
-    margin: 0 auto;
-}
+html,
+body {
 
-
-html{
-
+    margin: 0;
+    padding: 0;
 
     background-color: var(--clr-bg-800);
-    height: 100%;
-    margin: 0 auto;
+
     overflow-x: hidden; 
     cursor: default;
     scroll-behavior: smooth;
-
 }
 
 
 nav ul{
+
+    padding: 0;
+    margin: 0;
+    position: fixed;
     background-color: var(--clr-nav-500);
     width: 100%;
     display: inline-block;
     text-decoration: none;
-    position: fixed;
+    z-index: 1000;
 }
 
 nav li{
@@ -86,44 +81,45 @@ nav a:hover{
     
 }
 
-.container {
-
-    width: min(90%, 10rem);
-    height: 100%;
-    padding: 20.75em;
-
-}
-
-.container--narrow {
-
-    width: min(90%, 10rem);
-    height: 100%;
-}
 .first-section {
 
-    width: 100%;
-    background: url(OrlandoCitySkyline.jpg);
+    top: 0;
+    left: 0;
+  
+}
+
+.first-background-img {
+
+    margin: 0;
+
+    position: absolute;
+    background: url(OrlandoCitySkyline.jpg); 
     background-repeat: no-repeat;
     background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
 
+    top: 0;
+    width: 100%;
+    padding: 22.5rem;
+    z-index: 0;
 
 }
 
 .welcome {
 
-    display: flex;
-    position: relative;
-
-    justify-content: center;
-    align-items: center;
+    position: absolute;
     color: var(--clr-primary-100);
     font-family: var(--ff-accent);
     font-size: 4.5rem;
-    text-align: center;
+    white-space: nowrap;
 
+    display: flex;
+
+    top: 15.25rem;
+
+    left: 33vw;
+
+
+    text-align: center;
 }
 
 .welcome:hover{
@@ -135,25 +131,23 @@ nav a:hover{
 
     display: none;
 
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
     color: var(--clr-primary-100);
     font-family: var(--ff-primary);
     font-size: 2rem;
-
-    background-color: var(--clr-bg-800);
-    border-radius: 1.25rem;
-
+    line-height: 2.5rem;
     text-align: center;
 
-    top: 15rem;
+    background-color: var(--clr-bg-800);
+    
+    border-radius: 1.25rem;
+    
+    position: absolute;
+    top: 14rem;
     right: .001rem;
 
+    padding: 1.125rem;
 
 }
-
 
 .welcome:hover + .about-me{
 
@@ -161,29 +155,46 @@ nav a:hover{
 }
 
 
-#second-section  {
-
+#second-section {
+    
+    position: absolute;
     width: 100%;
-    background: url(ProjectsSectionImage.jpeg);
+    top: 45rem;    
+}
+
+#second-background-img {
+
+    margin: 0;
+
+    position: absolute;
+    background: url(ProjectsSectionImage.jpeg); 
     background-repeat: no-repeat;
     background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+
+    top: 0;
+    width: 100%;
+    padding: 22.5rem;
+    z-index: 0;
+
+
 }
+
 
 .second-section-message { 
 
+    position: absolute;
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
     color: var(--clr-neutral-900);
     font-family: var(--ff-accent);
     font-size: 4.5rem;
+
     text-align: center;
-    bottom: 10rem;
+    top: 15rem;
+
+    left: 27vw;
+
+    z-index: 1;
+    white-space: nowrap;
 }
 
 .button-center {
@@ -193,9 +204,11 @@ nav a:hover{
     justify-content: center;
     align-items: center;
 
-    position: relative;
+    position: absolute;
 
-    bottom: 8rem;
+    top: 27rem;
+    left: 40vw
+
 }
 
 .git-hub {
@@ -225,6 +238,15 @@ nav a:hover{
 
 
 /* Resume Styling */
+
+
+.container--narrow {
+
+    width: min(90%, 95rem);
+    height: 100%;
+}
+
+
 .contact-info{
 
     text-align: center;
@@ -291,5 +313,4 @@ nav a:hover{
     word-spacing: .1rem;
     padding: 1rem;
 
-}
 }
